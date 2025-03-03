@@ -3,20 +3,20 @@ import db from "../config/Database.js";
 
 const { DataTypes } = Sequelize;
 
-// Perbaikan: Ubah nama tabel dari 'user' menjadi 'users' untuk menghindari konflik
+// pake users
 const User = db.define("users", {
     name: {
         type: DataTypes.STRING,
-        allowNull: false // Pastikan nama tidak kosong
+        allowNull: false // nama
     },
     email: {
         type: DataTypes.STRING,
         allowNull: false,
-        unique: true // Pastikan email unik
+        unique: true // email
     },
     notes: {
         type: DataTypes.STRING,
-        allowNull: false
+        allowNull: false // notes
     }
 }, {
     tableName: "users",
