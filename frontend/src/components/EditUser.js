@@ -10,9 +10,9 @@ const navigate = useNavigate();
 const { id } = useParams();
 //const [gender, setGender] = useState('Male');
 
-useEffect(()=>{
+useEffect(() => {
     getUserById();
-},[]);
+}, [getUserById]); // Tambahkan getUserById ke dependency array
 
 const updateUser = async (e) => {
     e.preventDefault(); 
