@@ -5,7 +5,7 @@ import UserRoute from "./routes/UserRoute.js";
 const app = express();
 app.use(
     cors({
-      origin: "http://localhost:3000", 
+      origin: ['http://35.238.144.225:3000', 'http://192.168.1.11:3000', 'http://localhost:3000'], 
       methods: ["GET", "POST", "PATCH", "DELETE"],
       credentials: true,
     })
@@ -19,4 +19,7 @@ app.use((req, res, next) => {
 });
 
 
-app.listen(5000, '0.0.0.0', ()=> console.log('Server up and running....'));
+app.listen(5000, '0.0.0.0', () => {
+    console.log('Server running on port 5000');
+});
+
