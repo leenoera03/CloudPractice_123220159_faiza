@@ -12,6 +12,10 @@ app.use(
   );
 app.use(express.json());
 app.use(UserRoute);
+app.get("/", (req, res) => {
+    res.send("Server is running...");
+});
+
 // ini ni 
 app.use((req, res, next) => {
   console.log(`Incoming request: ${req.method} ${req.url}`);
